@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceRecognitionTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers" translatesAutoresizingMaskIntoConstraints="NO" id="fxj-mh-IIC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf1-TR-EG2">
+                                <rect key="frame" x="20" y="305" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Choose a picture"/>
+                                <connections>
+                                    <action selector="selectImageFromGallery" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLy-J1-7Jo"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z0K-rg-uv1">
+                                <rect key="frame" x="20" y="381" width="374" height="381"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g8z-Be-t6Q">
+                                    <size key="itemSize" width="100" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="FacesCollectionViewCell" id="IAx-s4-BBI" customClass="FacesCollectionViewCell" customModule="FaceRecognitionTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edt-Zm-Po3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="103.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-pL-Ind">
+                                                    <rect key="frame" x="0.0" y="105.5" width="100" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="edt-Zm-Po3" firstAttribute="top" secondItem="IAx-s4-BBI" secondAttribute="top" id="3Pv-Fq-1WN"/>
+                                            <constraint firstItem="edt-Zm-Po3" firstAttribute="leading" secondItem="IAx-s4-BBI" secondAttribute="leading" id="9vA-26-hJn"/>
+                                            <constraint firstAttribute="trailing" secondItem="edt-Zm-Po3" secondAttribute="trailing" id="W3I-r5-He2"/>
+                                            <constraint firstItem="Zau-pL-Ind" firstAttribute="top" secondItem="edt-Zm-Po3" secondAttribute="bottom" constant="2" id="ZNl-EH-N3l"/>
+                                            <constraint firstItem="edt-Zm-Po3" firstAttribute="top" secondItem="IAx-s4-BBI" secondAttribute="top" id="ap5-Tc-HQl"/>
+                                            <constraint firstItem="Zau-pL-Ind" firstAttribute="leading" secondItem="IAx-s4-BBI" secondAttribute="leading" id="btw-At-hJn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zau-pL-Ind" secondAttribute="bottom" id="tGM-dV-tf5"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zau-pL-Ind" secondAttribute="trailing" id="yzP-11-9Lm"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="120"/>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="Zau-pL-Ind" id="DSm-bT-Vzy"/>
+                                            <outlet property="faceView" destination="edt-Zm-Po3" id="3fg-zA-Lro"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nhN-0s-nls"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KV9-ME-kSm"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-Lb-TdM">
+                                <rect key="frame" x="20" y="87" width="374" height="210"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="5" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u2o-Lb-TdM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="11N-RL-rbW"/>
+                            <constraint firstItem="fxj-mh-IIC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6jW-qn-bFS"/>
+                            <constraint firstItem="u2o-Lb-TdM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EXU-A6-jHJ"/>
+                            <constraint firstItem="fxj-mh-IIC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K5Z-4C-zpd"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="305" id="Met-MM-6Nb"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="trailing" secondItem="u2o-Lb-TdM" secondAttribute="trailing" id="Nxl-5J-GVC"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="top" secondItem="u2o-Lb-TdM" secondAttribute="bottom" constant="8" id="PAG-sa-hSR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u2o-Lb-TdM" secondAttribute="trailing" constant="20" id="gQr-fS-wo6"/>
+                            <constraint firstItem="fxj-mh-IIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i1b-Xe-Q3q"/>
+                            <constraint firstItem="Z0K-rg-uv1" firstAttribute="top" secondItem="sf1-TR-EG2" secondAttribute="bottom" constant="40" id="jcJ-bj-9RW"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="trailing" secondItem="Z0K-rg-uv1" secondAttribute="trailing" id="k6T-7P-2Lo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxj-mh-IIC" secondAttribute="trailing" id="n4b-aG-lb6"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="leading" secondItem="u2o-Lb-TdM" secondAttribute="leading" id="ufH-Na-frn"/>
+                            <constraint firstItem="sf1-TR-EG2" firstAttribute="leading" secondItem="Z0K-rg-uv1" secondAttribute="leading" id="ujI-Pf-BrY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z0K-rg-uv1" secondAttribute="bottom" constant="100" id="upt-uR-bab"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="facesCollectionView" destination="Z0K-rg-uv1" id="1x1-oh-yzx"/>
+                        <outlet property="selectedImageView" destination="u2o-Lb-TdM" id="Rdo-uq-wTw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avengers" width="222" height="397"/>
+    </resources>
+</document>
